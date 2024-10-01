@@ -16,6 +16,22 @@ interface IIconProps {
   iconName: IconNames;
   width?: string;
   height?: string;
+  viewBox?: string;
 }
 
-export type { IRouterType, IAdvertiseType };
+interface INavType {
+  title: string;
+  key: string;
+  path?: string;
+  icon?: IIconProps;
+  children?: INavType[];
+}
+
+interface ISettingType {
+  key: string;
+  type: "primary";
+  size: "md";
+  icon: IIconProps;
+}
+
+export type { IRouterType, IAdvertiseType, INavType, ISettingType, IIconProps };
