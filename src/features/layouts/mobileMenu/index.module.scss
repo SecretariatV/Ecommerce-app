@@ -1,0 +1,64 @@
+@use "@styles/variables" as *;
+@use "@styles/mixin" as *;
+
+.root {
+  position: fixed;
+  z-index: 1000;
+  max-width: 415px;
+  min-width: 320px;
+  width: 100%;
+  height: 100%;
+  background-color: $green;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 0 25px;
+  overflow: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+
+  &_back {
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    @include bold;
+
+    svg {
+      stroke: white;
+    }
+  }
+
+  &_close {
+    svg {
+      stroke: white;
+    }
+  }
+}
+
+.body {
+  display: flex;
+  overflow-y: auto;
+
+  &_nav {
+    &_item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 0;
+
+      svg {
+        stroke: $red;
+      }
+    }
+  }
+}
+
+.footer {
+  height: 100px;
+  padding: 30px 25px 0;
+}
