@@ -1,0 +1,15 @@
+// $breakpoints: {
+//   'xm': ;
+// }
+
+@mixin light {
+  font-weight: 400;
+}
+
+@mixin medium {
+  font-weight: 500;
+}
+
+@mixin h5 {
+  font-size: 14px;
+}
