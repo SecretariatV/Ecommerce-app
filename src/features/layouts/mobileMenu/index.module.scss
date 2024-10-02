@@ -11,8 +11,16 @@
   background-color: $green;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  padding: 0 25px;
+  padding-left: 25px;
   overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  @include normalAnim;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .header {
@@ -20,16 +28,23 @@
   align-items: center;
   justify-content: space-between;
   height: 60px;
+  padding-right: 25px;
 
   &_back {
     color: white;
     font-size: 12px;
     display: flex;
+    opacity: 0;
     align-items: center;
     @include bold;
+    @include normalAnim;
 
     svg {
       stroke: white;
+    }
+
+    &.active {
+      opacity: 1;
     }
   }
 
@@ -40,25 +55,55 @@
   }
 }
 
+.view {
+  position: relative;
+  overflow-y: auto;
+}
+
+.subbody {
+  position: absolute;
+  top: 0;
+}
+
 .body {
   display: flex;
+  padding-right: 25px;
   overflow-y: auto;
+  @include normalAnim;
 
   &_nav {
+    width: 100%;
     &_item {
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 15px 0;
+      cursor: pointer;
 
-      svg {
-        stroke: $red;
+      svg,
+      span {
+        stroke: white;
+        color: white !important;
+      }
+
+      &:hover {
+        svg,
+        span {
+          stroke: $red;
+          color: $red !important;
+        }
       }
     }
+  }
+
+  &.next {
+    transform: translateX(-100%);
+    overflow: hidden;
   }
 }
 
 .footer {
   height: 100px;
-  padding: 30px 25px 0;
+  padding: 30px 50px 0 25px;
 }

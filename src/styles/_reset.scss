@@ -15,3 +15,21 @@ button {
 body {
   position: relative;
 }
+
+*::-webkit-scrollbar {
+  background-color: #ddd;
+  height: 5px;
+  width: 5px;
+  border-radius: 5px;
+  padding-left: 5px;
+  display: none;
+}
+
+*:hover::-webkit-scrollbar {
+  display: block;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #20766e;
+}
