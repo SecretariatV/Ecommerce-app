@@ -3,13 +3,21 @@
 
 .root {
   background-color: $green;
-  height: 60px;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
-  @include breakpoint("xl") {
-    padding: 0 50px;
+  .wrapper {
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    @include mainLayout;
+
+    @include breakpoint("xl") {
+      padding: 0 50px;
+    }
   }
 }
 
@@ -42,17 +50,26 @@
 }
 
 .nav {
-  display: flex;
+  display: none;
 
   &_item {
     padding: 10px;
   }
+
+  @include breakpoint("xl") {
+    display: flex;
+  }
 }
 
 .setting {
+  display: none !important;
   justify-content: end !important;
 
   button {
     padding: 10px;
+  }
+
+  @include breakpoint("xl") {
+    display: flex !important;
   }
 }
