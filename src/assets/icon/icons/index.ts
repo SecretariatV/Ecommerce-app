@@ -6,6 +6,7 @@ import { LeftArrow } from "./LeftArrow";
 import { Like } from "./Like";
 import { Notific } from "./Notific";
 import { Payment } from "./Payment";
+import { RightArrow } from "./RightArrow";
 import { Search } from "./Search";
 import { Squter } from "./Squter";
 import { Store } from "./Store";
@@ -20,6 +21,7 @@ export const Icons = {
   Like,
   Notific,
   Payment,
+  RightArrow,
   Search,
   Squter,
   Store,

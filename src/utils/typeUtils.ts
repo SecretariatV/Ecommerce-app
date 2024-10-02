@@ -1,5 +1,10 @@
 import { IconNames } from "@assets/icon/icons";
 
+interface IAppProps {
+  isMobileMenu: boolean;
+  mobileSubData: INavType[];
+}
+
 interface IRouterType {
   title: string;
   path: string;
@@ -34,4 +39,11 @@ interface ISettingType {
   icon: IIconProps;
 }
 
-export type { IRouterType, IAdvertiseType, INavType, ISettingType, IIconProps };
+export type {
+  IRouterType,
+  IAdvertiseType,
+  INavType,
+  ISettingType,
+  IIconProps,
+  IAppProps,
+};

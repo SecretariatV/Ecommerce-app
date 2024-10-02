@@ -7,12 +7,20 @@
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
+
+  @include breakpoint("xl") {
+    padding: 0 50px;
+  }
 }
 
 .button {
   border: 0;
   svg {
     stroke: white;
+  }
+
+  @include breakpoint("xl") {
+    display: none;
   }
 }
 
@@ -30,5 +38,21 @@
 
   img {
     height: 100%;
+  }
+}
+
+.nav {
+  display: flex;
+
+  &_item {
+    padding: 10px;
+  }
+}
+
+.setting {
+  justify-content: end !important;
+
+  button {
+    padding: 10px;
   }
 }
