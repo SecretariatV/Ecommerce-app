@@ -3,15 +3,17 @@ import {
   IAdvertiseType,
   INavType,
   IRouterType,
+  IServiceAdType,
   ISettingType,
 } from "./typeUtils";
+import HomePage from "@pages/home";
 
 const ROUTER_DATA: IRouterType[] = [
   {
     title: "Main Layout",
     path: "/",
     element: <MainLayout />,
-    children: [],
+    children: [{ title: "Home", path: "", element: <HomePage /> }],
   },
 ];
 
@@ -102,6 +104,45 @@ const NAV_DATA: INavType[] = [
   },
 ];
 
+const CATEGORY_DATA: INavType[] = [
+  {
+    title: "Vegetables",
+    key: "vegetables",
+  },
+  {
+    title: "Fresh Fruit",
+    key: "fruit",
+  },
+  {
+    title: "Meat",
+    key: "meat",
+  },
+  {
+    title: "Seafood",
+    key: "seafood",
+  },
+  {
+    title: "Baking",
+    key: "baking",
+  },
+  {
+    title: "Drinks",
+    key: "drink",
+  },
+  {
+    title: "Milk",
+    key: "milk",
+  },
+  {
+    title: "Eggs",
+    key: "egg",
+  },
+  {
+    title: "Cheese",
+    key: "cheese",
+  },
+];
+
 const SETTING_DATA: ISettingType[] = [
   {
     key: "search",
@@ -149,4 +190,34 @@ const SETTING_DATA: ISettingType[] = [
   },
 ];
 
-export { ROUTER_DATA, ADVERTISE_DATA, NAV_DATA, SETTING_DATA };
+const SERVICE_DATA: IServiceAdType[] = [
+  {
+    iconName: "Squter",
+    title: "Free Delivery Across the US!",
+    detail: "Free delivery for all orders above $100",
+  },
+  {
+    iconName: "Friendship",
+    title: "100% Satisfaction Guarantee!",
+    detail: "Providing help in case of dissatisfaction",
+  },
+  {
+    iconName: "Notific",
+    title: "Top-Notch Support",
+    detail: "Chat with us if you've any questions",
+  },
+  {
+    iconName: "Payment",
+    title: "Secure Payments",
+    detail: "We use safest payment technologies",
+  },
+];
+
+export {
+  ROUTER_DATA,
+  ADVERTISE_DATA,
+  NAV_DATA,
+  SETTING_DATA,
+  SERVICE_DATA,
+  CATEGORY_DATA,
+};

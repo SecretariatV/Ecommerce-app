@@ -39,6 +39,12 @@ interface ISettingType {
   icon: IIconProps;
 }
 
+interface IServiceAdType {
+  iconName: IconNames;
+  title: string;
+  detail: string;
+}
+
 export type {
   IRouterType,
   IAdvertiseType,
@@ -46,4 +52,5 @@ export type {
   ISettingType,
   IIconProps,
   IAppProps,
+  IServiceAdType,
 };
