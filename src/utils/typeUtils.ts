@@ -3,6 +3,7 @@ import { IconNames } from "@assets/icon/icons";
 interface IAppProps {
   isMobileMenu: boolean;
   mobileSubData: INavType[];
+  breadcrumb: string[];
 }
 
 interface IRouterType {
@@ -27,6 +28,7 @@ interface IIconProps {
 interface INavType {
   title: string;
   key: string;
+  breadcrumb?: string[];
   path?: string;
   icon?: IIconProps;
   children?: INavType[];

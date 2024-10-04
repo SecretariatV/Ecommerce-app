@@ -19,6 +19,7 @@ const AppProvider = ({ children }: { children: ReactNode }) => {
   const [app, setApp] = useState<IAppProps>({
     isMobileMenu: false,
     mobileSubData: [],
+    breadcrumb: [],
   });
 
   return (
