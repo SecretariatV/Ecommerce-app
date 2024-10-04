@@ -1,0 +1,27 @@
+@use "@styles/mixin" as *;
+@use "@styles/variables" as *;
+
+.root {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.23;
+  letter-spacing: 0.015em;
+  color: $green;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  &_item {
+    display: flex;
+    align-items: center;
+
+    &_tag {
+      padding: 0 4px;
+      stroke: $red;
+    }
+  }
+}

@@ -6,12 +6,28 @@ import MobileMenu from "../mobileMenu";
 import { useApp } from "@contexts/appContext";
 import { NAV_DATA } from "@utils/dataUtils";
 import { ButtonComponent } from "@features/ui/button";
+import { useNavigate } from "react-router-dom";
+import { INavType } from "@utils/typeUtils";
 
 const Header = () => {
   const { setApp } = useApp();
+  const navigate = useNavigate();
 
   const handleOpenMenu = () => {
     setApp((prevState) => ({ ...prevState, isMobileMenu: true }));
+  };
+
+  const handleChangeRouter = (data: INavType) => {
+    if (data.path) {
+      navigate(data.path);
+    }
+
+    if (data.breadcrumb) {
+      setApp((prevState) => ({
+        ...prevState,
+        breadcrumb: data.breadcrumb || [],
+      }));
+    }
   };
 
   return (
@@ -42,6 +58,7 @@ const Header = () => {
                 title={data.title}
                 key={data.key}
                 className={S.nav_item}
+                onClick={() => handleChangeRouter(data)}
               />
             ))}
           </ul>

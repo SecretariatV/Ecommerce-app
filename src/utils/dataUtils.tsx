@@ -7,13 +7,17 @@ import {
   ISettingType,
 } from "./typeUtils";
 import HomePage from "@pages/home";
+import ShopPage from "@pages/shop";
 
 const ROUTER_DATA: IRouterType[] = [
   {
     title: "Main Layout",
     path: "/",
     element: <MainLayout />,
-    children: [{ title: "Home", path: "", element: <HomePage /> }],
+    children: [
+      { title: "Home", path: "", element: <HomePage /> },
+      { title: "Shop", path: "/shop", element: <ShopPage /> },
+    ],
   },
 ];
 
@@ -40,66 +44,151 @@ const NAV_DATA: INavType[] = [
   {
     title: "Shop",
     key: "shop",
+    path: "shop",
+    breadcrumb: ["Home", "Shop"],
   },
   {
     title: "Vegetables",
     key: "vegetables",
+    breadcrumb: ["Home", "Shop", "Vegetables"],
     children: [
-      { title: "Leafy Green", key: "leafy" },
-      { title: "Mushrooms", key: "mushroom" },
-      { title: "Root", key: "root" },
+      {
+        title: "Leafy Green",
+        key: "leafy",
+        breadcrumb: ["Home", "Shop", "Vegetables", "Leafy Green"],
+      },
+      {
+        title: "Mushrooms",
+        key: "mushroom",
+        breadcrumb: ["Home", "Shop", "Vegetables", "Mushrooms"],
+      },
+      {
+        title: "Root",
+        key: "root",
+        breadcrumb: ["Home", "Shop", "Vegetables", "Root"],
+      },
     ],
   },
   {
     title: "Fresh Fruit",
     key: "fruit",
+    breadcrumb: ["Home", "Shop", "Fresh Fruit"],
     children: [
-      { title: "Apple & Stone Fruits", key: "apple" },
-      { title: "Barries", key: "barries" },
-      { title: "Tropical & Exotic", key: "tropical" },
+      {
+        title: "Apple & Stone Fruits",
+        key: "apple",
+        breadcrumb: ["Home", "Shop", "Fresh Fruit", "Apple & Stone Fruits"],
+      },
+      {
+        title: "Barries",
+        key: "barries",
+        breadcrumb: ["Home", "Shop", "Fresh Fruit", "Barries"],
+      },
+      {
+        title: "Tropical & Exotic",
+        key: "tropical",
+        breadcrumb: ["Home", "Shop", "Fresh Fruit", "Tropical & Exotic"],
+      },
     ],
   },
   {
     title: "Meat",
     key: "meat",
+    breadcrumb: ["Home", "Shop", "Meat"],
     children: [
-      { title: "Chicken & Poultry", key: "chicken" },
-      { title: "Meat Gift Baskets", key: "basket" },
-      { title: "Red Meat & Steaks", key: "steak" },
+      {
+        title: "Chicken & Poultry",
+        key: "chicken",
+        breadcrumb: ["Home", "Shop", "Meat", "Chicken & Poultry"],
+      },
+      {
+        title: "Meat Gift Baskets",
+        key: "basket",
+        breadcrumb: ["Home", "Shop", "Meat", "Meat Gift Baskets"],
+      },
+      {
+        title: "Red Meat & Steaks",
+        key: "steak",
+        breadcrumb: ["Home", "Shop", "Meat", "Red Meat & Steaks"],
+      },
     ],
   },
   {
     title: "Seafood",
     key: "seafood",
+    breadcrumb: ["Home", "Shop", "Seafood"],
     children: [
-      { title: "Fish", key: "fish" },
-      { title: "Lobsters", key: "lobster" },
-      { title: "Other Seafood", key: "other_sea" },
+      {
+        title: "Fish",
+        key: "fish",
+        breadcrumb: ["Home", "Shop", "Seafood", "Fish"],
+      },
+      {
+        title: "Lobsters",
+        key: "lobster",
+        breadcrumb: ["Home", "Shop", "Seafood", "Lobsters"],
+      },
+      {
+        title: "Other Seafood",
+        key: "other_sea",
+        breadcrumb: ["Home", "Shop", "Seafood", "Other Seafood"],
+      },
     ],
   },
   {
     title: "Baking",
     key: "baking",
+    breadcrumb: ["Home", "Shop", "Baking"],
     children: [
-      { title: "Bread", key: "bread" },
-      { title: "Tortillas", key: "tortilla" },
+      {
+        title: "Bread",
+        key: "bread",
+        breadcrumb: ["Home", "Shop", "Baking", "Bread"],
+      },
+      {
+        title: "Tortillas",
+        key: "tortilla",
+        breadcrumb: ["Home", "Shop", "Baking", "Tortillas"],
+      },
     ],
   },
   {
     title: "Drinks",
     key: "drinks",
+    breadcrumb: ["Home", "Shop", "Drinks"],
     children: [
-      { title: "Juice", key: "juice" },
-      { title: "Water", key: "water" },
+      {
+        title: "Juice",
+        key: "juice",
+        breadcrumb: ["Home", "Shop", "Drinks", "Juice"],
+      },
+      {
+        title: "Water",
+        key: "water",
+        breadcrumb: ["Home", "Shop", "Drinks", "Water"],
+      },
     ],
   },
   {
     title: "Other",
     key: "other",
+    breadcrumb: ["Home", "Shop", "Other"],
     children: [
-      { title: "Milk", key: "milk" },
-      { title: "Cheese", key: "cheese" },
-      { title: "Eggs", key: "egg" },
+      {
+        title: "Milk",
+        key: "milk",
+        breadcrumb: ["Home", "Shop", "Other", "Milk"],
+      },
+      {
+        title: "Cheese",
+        key: "cheese",
+        breadcrumb: ["Home", "Shop", "Other", "Cheese"],
+      },
+      {
+        title: "Eggs",
+        key: "egg",
+        breadcrumb: ["Home", "Shop", "Other", "Eggs"],
+      },
     ],
   },
 ];
