@@ -16,7 +16,7 @@ export const BreadcrumbComponent = () => {
               viewBox="0 0 24 24"
               width="20"
               height="20"
-              className={S.list_item_tag}
+              className={S.tag}
             />
           </li>
         ))}

@@ -19,7 +19,22 @@
     display: flex;
     align-items: center;
 
-    &_tag {
+    &:not(:last-child) {
+      cursor: pointer;
+      @include normalAnim;
+
+      &:hover {
+        color: $red;
+      }
+    }
+
+    &:last-child {
+      .tag {
+        display: none;
+      }
+    }
+
+    .tag {
       padding: 0 4px;
       stroke: $red;
     }

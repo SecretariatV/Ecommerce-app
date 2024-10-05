@@ -1,2 +1,54 @@
+@use "@styles/variables" as *;
+@use "@styles/mixin" as *;
+
 .root {
+}
+
+.header {
+  padding: 30px 50px 35px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  line-height: 32px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: $green;
+}
+
+.slide {
+  cursor: pointer;
+  flex: 0 0 12.5% !important;
+
+  &:hover {
+    p {
+      color: $red;
+    }
+
+    img {
+      transform: scale(1.05);
+    }
+  }
+
+  img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    @include normalAnim;
+  }
+
+  p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: $green;
+    @include normalAnim;
+  }
 }

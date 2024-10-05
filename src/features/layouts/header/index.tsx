@@ -26,6 +26,7 @@ const Header = () => {
       setApp((prevState) => ({
         ...prevState,
         breadcrumb: data.breadcrumb || [],
+        activeBreadcrumb: data.title,
       }));
     }
   };

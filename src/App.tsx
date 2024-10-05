@@ -1,7 +1,12 @@
 import PageRouter from "@utils/routerUtils";
+import { MantineProvider } from "@mantine/core";
 
 const App = () => {
-  return <PageRouter />;
+  return (
+    <MantineProvider>
+      <PageRouter />
+    </MantineProvider>
+  );
 };
 
 export default App;

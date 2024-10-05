@@ -8,6 +8,14 @@ import {
 } from "./typeUtils";
 import HomePage from "@pages/home";
 import ShopPage from "@pages/shop";
+import VegetableImage from "@assets/shop/category-vegetable.webp";
+import FruitImage from "@assets/shop/category-fruit.webp";
+import MeatImage from "@assets/shop/category-meat.webp";
+import SeafoodImage from "@assets/shop/category-fish.webp";
+import BakingImage from "@assets/shop/category-breaking.webp";
+import DrinkImage from "@assets/shop/category-drinks.webp";
+import EggImage from "@assets/shop/category-egg.webp";
+import LeafyImage from "@assets/shop/sub/vegetable-leafy.webp";
 
 const ROUTER_DATA: IRouterType[] = [
   {
@@ -49,7 +57,7 @@ const NAV_DATA: INavType[] = [
   },
   {
     title: "Vegetables",
-    key: "vegetables",
+    key: "vegetable",
     breadcrumb: ["Home", "Shop", "Vegetables"],
     children: [
       {
@@ -196,7 +204,7 @@ const NAV_DATA: INavType[] = [
 const CATEGORY_DATA: INavType[] = [
   {
     title: "Vegetables",
-    key: "vegetables",
+    key: "vegetable",
   },
   {
     title: "Fresh Fruit",
@@ -229,6 +237,139 @@ const CATEGORY_DATA: INavType[] = [
   {
     title: "Cheese",
     key: "cheese",
+  },
+];
+
+const SHOP_CATEGORY_DATA: INavType[] = [
+  {
+    title: "Vegetables",
+    key: "vegetable",
+    breadcrumb: ["Home", "Shop", "Vegetables"],
+    image: VegetableImage,
+    children: [
+      {
+        title: "Leafy Green",
+        key: "leafy",
+        breadcrumb: ["Home", "Shop", "Vegetables", "Leafy Green"],
+        image: LeafyImage,
+      },
+      {
+        title: "Mushrooms",
+        key: "mushroom",
+      },
+      {
+        title: "Root",
+        key: "root",
+      },
+    ],
+  },
+  {
+    title: "Fresh Fruit",
+    key: "fruit",
+    breadcrumb: ["Home", "Shop", "Fresh Fruit"],
+    image: FruitImage,
+    children: [
+      {
+        title: "Apple & Stone Fruits",
+        key: "apple",
+      },
+      {
+        title: "Barries",
+        key: "barries",
+      },
+      {
+        title: "Tropical & Exotic",
+        key: "tropical",
+      },
+    ],
+  },
+  {
+    title: "Meat",
+    key: "meat",
+    breadcrumb: ["Home", "Shop", "Meat"],
+    image: MeatImage,
+    children: [
+      {
+        title: "Chicken & Poultry",
+        key: "chicken",
+      },
+      {
+        title: "Meat Gift Baskets",
+        key: "basket",
+      },
+      {
+        title: "Red Meat & Steaks",
+        key: "steak",
+      },
+    ],
+  },
+  {
+    title: "Seafood",
+    key: "seafood",
+    breadcrumb: ["Home", "Shop", "Seafood"],
+    image: SeafoodImage,
+    children: [
+      {
+        title: "Fish",
+        key: "fish",
+      },
+      {
+        title: "Lobsters",
+        key: "lobster",
+      },
+      {
+        title: "Other Seafood",
+        key: "other_sea",
+      },
+    ],
+  },
+  {
+    title: "Eggs",
+    key: "egg",
+    breadcrumb: ["Home", "Shop", "Eggs"],
+    image: EggImage,
+    children: [
+      {
+        title: "Chicken Eggs",
+        key: "chicken_egg",
+      },
+      {
+        title: "Other Eggs",
+        key: "other_egg",
+      },
+    ],
+  },
+  {
+    title: "Baking",
+    key: "baking",
+    breadcrumb: ["Home", "Shop", "Baking"],
+    image: BakingImage,
+    children: [
+      {
+        title: "Bread",
+        key: "bread",
+      },
+      {
+        title: "Tortillas",
+        key: "tortilla",
+      },
+    ],
+  },
+  {
+    title: "Drinks",
+    key: "drink",
+    breadcrumb: ["Home", "Shop", "Drinks"],
+    image: DrinkImage,
+    children: [
+      {
+        title: "Juice",
+        key: "juice",
+      },
+      {
+        title: "Water",
+        key: "water",
+      },
+    ],
   },
 ];
 
@@ -309,4 +450,5 @@ export {
   SETTING_DATA,
   SERVICE_DATA,
   CATEGORY_DATA,
+  SHOP_CATEGORY_DATA,
 };

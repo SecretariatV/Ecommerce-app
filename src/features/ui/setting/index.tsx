@@ -12,7 +12,12 @@ export const SettingComponent: FC<IProps> = ({ className }) => {
   return (
     <div className={clsx(S.root, className)}>
       {SETTING_DATA.map((data) => (
-        <ButtonComponent type={data.type} size={data.size} icon={data.icon} />
+        <ButtonComponent
+          type={data.type}
+          size={data.size}
+          icon={data.icon}
+          key={data.key}
+        />
       ))}
     </div>
   );

@@ -20,6 +20,7 @@ const AppProvider = ({ children }: { children: ReactNode }) => {
     isMobileMenu: false,
     mobileSubData: [],
     breadcrumb: [],
+    activeBreadcrumb: "",
   });
 
   return (

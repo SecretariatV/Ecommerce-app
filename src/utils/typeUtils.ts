@@ -4,6 +4,7 @@ interface IAppProps {
   isMobileMenu: boolean;
   mobileSubData: INavType[];
   breadcrumb: string[];
+  activeBreadcrumb: string;
 }
 
 interface IRouterType {
@@ -29,6 +30,7 @@ interface INavType {
   title: string;
   key: string;
   breadcrumb?: string[];
+  image?: string;
   path?: string;
   icon?: IIconProps;
   children?: INavType[];
